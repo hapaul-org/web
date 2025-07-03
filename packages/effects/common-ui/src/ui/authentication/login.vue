@@ -70,7 +70,7 @@ async function handleSubmit() {
   if (valid) {
     localStorage.setItem(
       REMEMBER_ME_KEY,
-      rememberMe.value ? values?.username : '',
+      rememberMe.value ? values?.account : '',
     );
     emit('submit', values);
   }
@@ -82,7 +82,7 @@ function handleGo(path: string) {
 
 onMounted(() => {
   if (localUsername) {
-    formApi.setFieldValue('username', localUsername);
+    formApi.setFieldValue('account', localUsername);
   }
 });
 
